@@ -9,6 +9,7 @@ import java.util.*;
  *
  * @author LuisGuillermo
  */
+
 public abstract class Fetch {
     int [] v;
     
