@@ -12,4 +12,7 @@ package fetch.pkgclass;
 public interface Ordenamientos {
     
     public abstract void seleccion();
+    public abstract void insercion();
+    public abstract void burbuja();
+    public abstract void mergesort();
 }
