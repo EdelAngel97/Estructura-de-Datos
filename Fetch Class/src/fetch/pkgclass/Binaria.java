@@ -100,7 +100,8 @@ public class Binaria extends Fetch implements Ordenamientos{
             if(i<=j)
             {
                 intercambio(i,j);
-                i++;j--;
+                i++;
+                j--;
             }
         }
         
