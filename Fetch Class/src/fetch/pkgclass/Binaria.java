@@ -48,4 +48,72 @@ public class Binaria extends Fetch implements Ordenamientos{
 }
     }
 }
+
+    @Override
+    public void insercion() {
+        for(int i=0;i<v.length;i++){
+            int temp = v[i];
+            int j = i-1;
+            
+            while((j>=0) && (v[j]>temp)){
+                v[j+1] = v[j];
+                j--;
+            }
+            v[j+1] = temp;
+        }
+    }
+    
+    public void intercambio(int i,int j){
+    int temp = v[j];
+    v[j] = v[i];
+    v[i] = temp;
+    
+}
+
+    @Override
+    public void burbuja() {
+        for(int i=1;i<v.length;i++){
+            for(int j=0;j<v.length;j++){
+                if(v[j]>v[j+1]){
+                    intercambio(j,j+1);
+                }
+            }
+        }
+    }
+
+    
+    public void mergesort(int start, int end) {
+        int i = start;
+        int j = end;
+        int center;
+        
+        center= v[(i+j)/2];
+        do{
+            while(v[i]<center)
+            {
+                i++;
+            }
+             while(v[j]<center)
+            {
+                j--;
+            }
+            if(i<=j)
+            {
+                intercambio(i,j);
+                i++;j--;
+            }
+        }
+        
+        while(i<=j);
+        if(start<j){
+            mergesort(start, j);
+        }
+        if(i < end){
+            mergesort(i, end);
+}
+    }
+
+    
+    
+    
 }
